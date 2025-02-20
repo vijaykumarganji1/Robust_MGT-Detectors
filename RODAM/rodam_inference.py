@@ -66,10 +66,10 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # Set Model and Dataset Paths
 dataset = 'cmv'
 llm_name = 'GPT'
-model_save_path = f'/home/tarun/MTP/Trained_Models/RODAM/setting1/{llm_name}/rodam_{dataset}_{llm_name.lower()}_ovr.pt'
-model_save_path = f'/home/tarun/MTP/Trained_Models/RODAM/medquad/checkpoint_rodam_train_valid_source_test_target_medquad.pt'
-test_dataset_path = '/home/tarun/MTP/data/HealthCare2K/bioasq/bioasq_2k.csv'
-prediction_save_path = '/home/tarun/MTP/data/HealthCare2K/bioasq/bioasq_2k_predictions_of_train_valid_source_test_target_medquad_model.csv'
+model_save_path = f'./Trained_Models/RODAM/setting1/{llm_name}/rodam_{dataset}_{llm_name.lower()}_ovr.pt'
+model_save_path = f'./Trained_Models/RODAM/medquad/checkpoint_rodam_train_valid_source_test_target_medquad.pt'
+test_dataset_path = './data/HealthCare2K/bioasq/bioasq_2k.csv'
+prediction_save_path = './data/HealthCare2K/bioasq/bioasq_2k_predictions_of_train_valid_source_test_target_medquad_model.csv'
 
 #Load Dataset
 test_dataset = pd.read_csv(test_dataset_path)

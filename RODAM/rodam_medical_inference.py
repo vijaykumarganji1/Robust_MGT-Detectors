@@ -86,14 +86,14 @@ for model_type in model_types:
     for model_name in model_names:
         if model_type == 'best':
             if model_name in ['bioasq', 'bioasq_gpt']:
-                model_save_path = f'/home/tarun/MTP/Trained_Models/RODAM/bioasq/rodam_train_valid_source_test_target_{model_name}.pt'
+                model_save_path = f'./Trained_Models/RODAM/bioasq/rodam_train_valid_source_test_target_{model_name}.pt'
             if model_name in ['medquad', 'medquad_gpt']:
-                model_save_path = f'/home/tarun/MTP/Trained_Models/RODAM/medquad/rodam_train_valid_source_test_target_{model_name}.pt'
+                model_save_path = f'./Trained_Models/RODAM/medquad/rodam_train_valid_source_test_target_{model_name}.pt'
         elif model_type == 'checkpoint':
             if model_name in ['bioasq', 'bioasq_gpt']:
-                model_save_path = f'/home/tarun/MTP/Trained_Models/RODAM/bioasq/checkpoint_rodam_train_valid_source_test_target_{model_name}.pt'
+                model_save_path = f'./Trained_Models/RODAM/bioasq/checkpoint_rodam_train_valid_source_test_target_{model_name}.pt'
             if model_name in ['medquad', 'medquad_gpt']:
-                model_save_path = f'/home/tarun/MTP/Trained_Models/RODAM/medquad/checkpoint_rodam_train_valid_source_test_target_{model_name}.pt'
+                model_save_path = f'./Trained_Models/RODAM/medquad/checkpoint_rodam_train_valid_source_test_target_{model_name}.pt'
 
         # Load Model
         checkpoint = torch.load(model_save_path , map_location=torch.device(device))
@@ -105,12 +105,12 @@ for model_type in model_types:
         model_name = model_save_path.split('/')[-1][:-3]
         for dataset_name in datasets:
             dn = dataset_name.split('_')[0]
-            test_dataset_path = f'/home/tarun/MTP/data/HealthCare2K/{dn}/{dataset_name}_2k.csv'
-            prediction_save_path = f'/home/tarun/MTP/medical_predictions/{dataset_name}_2k_predictions_of_{model_name}.csv'
+            test_dataset_path = f'./data/HealthCare2K/{dn}/{dataset_name}_2k.csv'
+            prediction_save_path = f'./medical_predictions/{dataset_name}_2k_predictions_of_{model_name}.csv'
 
             #dn = dataset_name.split('_')[0]
-            #test_dataset_path = f'/home/tarun/MTP/data/HealthCare/{dn}/{dataset_name}_test.csv'
-            #prediction_save_path = f'/home/tarun/MTP/medical_predictions/{dataset_name}_test_predictions_of_{model_name}.csv'
+            #test_dataset_path = f'./data/HealthCare/{dn}/{dataset_name}_test.csv'
+            #prediction_save_path = f'./medical_predictions/{dataset_name}_test_predictions_of_{model_name}.csv'
 
             test_dataset = pd.read_csv(test_dataset_path)
 
@@ -125,5 +125,5 @@ for model_type in model_types:
 
             print(f"{dataset_name}--{model_name} is Done..")
 
-result_df.to_csv('/home/tarun/MTP/medical_2k_domain_indomain_rodam_result.csv', index = False)
+result_df.to_csv('./medical_2k_domain_indomain_rodam_result.csv', index = False)
 

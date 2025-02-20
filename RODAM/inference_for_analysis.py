@@ -9,10 +9,10 @@ from models import RobertaForContrastiveClassification, T5Paraphraser
 
 import sys
 # Create or open the output.txt file in write mode
-output_file_path = '/home/tarun/MTP/Predictions_for_Analysis/rodam_inference_time_details.txt'
+output_file_path = './Predictions_for_Analysis/rodam_inference_time_details.txt'
 output_file = open(output_file_path, 'w')
 
-output_file_path_1 = '/home/tarun/MTP/Predictions_for_Analysis/rodam_inference_details.txt'
+output_file_path_1 = './Predictions_for_Analysis/rodam_inference_details.txt'
 output_file_1 = open(output_file_path_1, 'w')
 # Redirect stdout to both terminal and output.txt
 class Tee:
@@ -98,9 +98,9 @@ llm_name = 'GPT'
 datasets = ['xsum','yelp','hswag','roct','eli5','sci_gen','tldr','wp','squad','cmv']
 
 for dataset in datasets:
-    model_save_path = f'/home/tarun/MTP/Trained_Models/RODAM/setting1/{llm_name}/rodam_{dataset}_{llm_name.lower()}_ovr.pt'
-    test_dataset_path = f'/home/tarun/MTP/data/All_LLM_Version_Dataset/GPT_Version/{dataset}/test.csv'
-    prediction_save_path = f'/home/tarun/MTP/Predictions_for_Analysis/RODAM/{dataset}_test_predictions_of_rodam_{dataset}_{llm_name.lower()}_model.csv'
+    model_save_path = f'./Trained_Models/RODAM/{llm_name}/rodam_{dataset}_{llm_name.lower()}_ovr.pt'
+    test_dataset_path = f'test.csv'
+    prediction_save_path = f'/{dataset}_test_predictions_of_rodam_{dataset}_{llm_name.lower()}_model.csv'
 
     #Load Dataset
     test_dataset = pd.read_csv(test_dataset_path)
