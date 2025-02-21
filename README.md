@@ -53,7 +53,7 @@ Each file in this dataset contains the following columns:
   - **[PubMed](https://pubmedqa.github.io/)**  
   - **[MedQuAD](https://github.com/abachaa/MedQuAD)**
   - **[BioASQ](https://www.bioasq.org/content/bioasq-qa-manually-curated-corpus-biomedical-question-answering)**
-- The dataset includes both human-written and machine-generated text using **LLaMA**.
+- The dataset initially contains human-written text, with machine-generated text later added using **LLaMA**.
 - A portion of the AI-generated text has been paraphrased using a Pegasus-based paraphraser.
 
 ---
