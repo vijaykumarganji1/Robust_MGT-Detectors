@@ -45,7 +45,6 @@ Each file in this dataset contains the following columns:
   - Review
 - The dataset originally contained machine-generated text from GPT.
 - We additionally generated text using **LLaMA** and **Mistral**.
-- A portion of the AI-generated text was paraphrased using a Pegasus-based paraphraser.
 
 ##### iii. **Medical Data**
 **Dataset Overview:**
@@ -54,7 +53,6 @@ Each file in this dataset contains the following columns:
   - **[MedQuAD](https://github.com/abachaa/MedQuAD)**
   - **[BioASQ](https://www.bioasq.org/content/bioasq-qa-manually-curated-corpus-biomedical-question-answering)**
 - The dataset initially contains human-written text, with machine-generated text later added using **LLaMA**.
-- A portion of the AI-generated text has been paraphrased using a Pegasus-based paraphraser.
 
 ---
 
