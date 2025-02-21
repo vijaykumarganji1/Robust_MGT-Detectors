@@ -48,7 +48,7 @@ Each file in this dataset contains the following columns:
 
 ##### iii. **Medical Data**
 **Dataset Overview:**
-- This dataset contains **2000** samples from three healthcare datasets:
+- This dataset contains **2000** samples from each of the three healthcare datasets:
   - **[PubMed](https://pubmedqa.github.io/)**  
   - **[MedQuAD](https://github.com/abachaa/MedQuAD)**
   - **[BioASQ](https://www.bioasq.org/content/bioasq-qa-manually-curated-corpus-biomedical-question-answering)**
