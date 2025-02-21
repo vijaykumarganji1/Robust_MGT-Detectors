@@ -8,7 +8,7 @@ We have three dataset folders. The label convention is as follows:
 
 ### 1. Non-Paraphrased Data
 #### **DEEP_FAKE(GPT_SPLIT)**
-This dataset contains data from ten domains. It is used to train RODAM/CONDA and is split into source and target data, each containing:
+This dataset is formed by splitting the data from [DeepFake/MAGE]{}https://github.com/yafuly/DeepfakeTextDetect.This dataset contains data from ten domains. It is used to train RODAM/CONDA and is split into source and target data, each containing:
 - **Real (human-written) text**
 - **Fake (machine-generated) text**
 - **Train, validation, and test splits**
@@ -50,9 +50,9 @@ Each file in this dataset contains the following columns:
 ##### iii. **Medical Data**
 **Dataset Overview:**
 - This dataset contains **2000** samples from three healthcare datasets:
-  - **PubMed**
-  - **MedQuAD**
-  - **BioASQ**
+  - **[PubMed]{https://pubmedqa.github.io/}**  
+  - **[MedQuAD]{https://github.com/abachaa/MedQuAD}**
+  - **[BioASQ]{https://www.bioasq.org/content/bioasq-qa-manually-curated-corpus-biomedical-question-answering}**
 - The dataset includes both human-written and machine-generated text using **LLaMA**.
 - A portion of the AI-generated text has been paraphrased using a Pegasus-based paraphraser.
 
